@@ -1,0 +1,17 @@
+# Izinkan akses file gambar
+<FilesMatch "\.(jpg|jpeg|png|gif|webp)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# Larang akses file script
+<FilesMatch "\.(php|php3|php4|php5|phtml|pl|py|jsp|asp|aspx|sh|cgi)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Larang akses ke file tersembunyi
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

@@ -1,0 +1,5 @@
+# Security Log File
+# This file will contain security-related events and potential threats2025-09-08 07:51:07 - IP: ::1 - Event: LOGIN_FAILED - Details: Username: jihyo
+2025-09-08 07:51:10 - IP: ::1 - Event: LOGIN_SUCCESS - Details: User: admin
+2025-09-08 07:55:18 - IP: ::1 - Event: LOGIN_SUCCESS - Details: User: admin
+2025-09-08 08:03:27 - IP: ::1 - Event: LOGIN_SUCCESS - Details: User: admin

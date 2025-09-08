@@ -1,0 +1,27 @@
+# Basic Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Prevent access to sensitive files
+<Files ~ "\.(log|sql|md|git|env)$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Prevent directory browsing
+Options -Indexes
+
+# File upload security
+<IfModule mod_php.c>
+    php_value upload_max_filesize 5M
+    php_value post_max_size 6M
+    php_value max_execution_time 30
+</IfModule>
+
+# Hide server info
+<IfModule mod_headers.c>
+    Header unset X-Powered-By
+</IfModule>
