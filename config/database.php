@@ -7,10 +7,10 @@ if (file_exists(__DIR__ . '/../.env')) {
     }
 }
 
-$servername = $_ENV['DB_HOST'] ?? "localhost";
-$username = $_ENV['DB_USER'] ?? "root";
-$password = $_ENV['DB_PASS'] ?? "";
-$dbname = $_ENV['DB_NAME'] ?? "aset_pribadi";
+$servername = $_ENV['DB_HOST'] ?? "127.0.0.1";
+$username = $_ENV['DB_USER'] ?? "rico";
+$password = $_ENV['DB_PASS'] ?? "sriwijaya1";
+$dbname = $_ENV['DB_NAME'] ?? "aset_management";
 
 try {
     $pdo = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8mb4", $username, $password);
